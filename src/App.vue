@@ -1,22 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BaseRadioButton name="address">Radio normal</BaseRadioButton>
+    <br/>
+    <BaseRadioButton name="address">Radio hover</BaseRadioButton>
+    <br/>
+    <BaseRadioButton name="address" checked>Radio selected</BaseRadioButton>
+    <br/>
+    <BaseRadioButton name="address" disabled>Radio disabled</BaseRadioButton>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseRadioButton from './components/BaseRadioButton.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BaseRadioButton
   }
 }
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

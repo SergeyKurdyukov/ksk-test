@@ -1,0 +1,82 @@
+<template>
+  <label class="radio-container">
+    <input class="radio-input" type="radio"
+      :checked="checked"
+      :disabled="disabled"
+      :name="name">
+    <div class="radio-button">
+      <span class="radio-button__mark"></span>
+    </div>
+    <span class="label">
+      <slot></slot>
+    </span>
+  </label>
+</template>
+
+<script>
+export default {
+  name: 'BaseRadioButton',
+  props: {
+    checked: Boolean,
+    disabled: Boolean,
+    name: String
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+$label-margin: 14px;
+$normal-color: #dbdff0;
+$selected-color: #0698db;
+$disabled-radio-color: #edeeef;
+$disabled-text-color: #b8bed8;
+
+.radio-input {
+  display: none;
+}
+
+.radio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $normal-color;
+  position: absolute;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+
+  .radio-button__mark {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+}
+
+.label {
+  padding-left: $label-margin * 2;
+  font-size: 14px;
+}
+
+.radio-input:hover:not(:disabled) + .radio-button {
+  border-color: $selected-color;
+}
+.radio-input:hover:not(:disabled) ~ .label {
+  color: $selected-color;
+}
+
+.radio-input:disabled + .radio-button {
+  background-color: $disabled-radio-color;
+  border-color: $disabled-radio-color;
+}
+.radio-input:disabled ~ .label {
+  color: $disabled-text-color;
+}
+
+.radio-input:checked + .radio-button {
+  border-color: $selected-color;
+  .radio-button__mark {
+    background-color: $selected-color;
+  }
+}
+</style>
