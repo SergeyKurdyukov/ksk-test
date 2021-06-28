@@ -55,7 +55,6 @@ $disabled-text-color: #b8bed8;
 
 .label {
   padding-left: $label-margin * 2;
-  font-size: 14px;
 }
 
 .radio-input:hover:not(:disabled) + .radio-button {
