@@ -1,6 +1,6 @@
 <template>
   <label class="radio-container">
-    <input class="visually-hidden" type="radio"
+    <input class="radio-input visually-hidden" type="radio"
       :checked="checked"
       :disabled="disabled"
       :name="name">
