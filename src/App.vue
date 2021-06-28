@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+
+    <BaseButton>Button normal</BaseButton>
+    <br/>
+    <BaseButton disabled>Button disabled</BaseButton>
+    <br/>
+    <br/>
+
     <BaseRadioButton name="address">Radio normal</BaseRadioButton>
     <br/>
     <BaseRadioButton name="address">Radio hover</BaseRadioButton>
@@ -23,12 +30,14 @@
 <script>
 import BaseRadioButton from './components/BaseRadioButton.vue'
 import BaseTextField from './components/BaseTextField.vue'
+import BaseButton from './components/BaseButton.vue'
 
 export default {
   name: 'App',
   components: {
     BaseRadioButton,
-    BaseTextField
+    BaseTextField,
+    BaseButton
   }
 }
 </script>
