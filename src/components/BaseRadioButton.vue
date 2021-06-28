@@ -1,6 +1,6 @@
 <template>
   <label class="radio-container">
-    <input class="radio-input" type="radio"
+    <input class="visually-hidden" type="radio"
       :checked="checked"
       :disabled="disabled"
       :name="name">
@@ -31,8 +31,15 @@ $selected-color: #0698db;
 $disabled-radio-color: #edeeef;
 $disabled-text-color: #b8bed8;
 
-.radio-input {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .radio-button {
