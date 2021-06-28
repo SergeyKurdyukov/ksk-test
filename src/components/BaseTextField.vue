@@ -58,8 +58,12 @@ $invalid-color: #ff1e38;
   input:invalid {
     border-color: $invalid-color;
   }
+  input:invalid + .error {
+    display: block;
+  }
 
   .error {
+    display: none;
     text-align: left;
     color: $invalid-color;
     font-size: 12px;
