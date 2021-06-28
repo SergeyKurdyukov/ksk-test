@@ -23,11 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/constants.scss';
+
 $common-color: #dadef0;
 $hover-color: #c3c9db;
 $focus-color: #8288a2;
-$disabled-color: #edeeef;
-$disabled-color-text: #b8bed8;
 $invalid-color: #ff1e38;
 
 .container {
@@ -41,7 +41,7 @@ $invalid-color: #ff1e38;
   .input {
     border-radius: 4px;
     border: 1px solid $common-color;
-    height: 56px;
+    height: $control-height-normal;
     padding: 0 20px;
   }
   .input:hover:not(:disabled):not(:invalid) {
@@ -51,8 +51,8 @@ $invalid-color: #ff1e38;
     border-color: $focus-color;
   }
   input:disabled {
-    background-color: $disabled-color;
-    border-color: $disabled-color;
+    background-color: $disabled-bg-color;
+    border-color: $disabled-bg-color;
   }
   // TODO: make disabled label as gray
   input:invalid {

@@ -25,11 +25,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/constants.scss';
+
 $label-margin: 14px;
 $normal-color: #dbdff0;
 $selected-color: #0698db;
-$disabled-radio-color: #edeeef;
-$disabled-text-color: #b8bed8;
 
 .visually-hidden {
   position: absolute;
@@ -72,8 +72,8 @@ $disabled-text-color: #b8bed8;
 }
 
 .radio-input:disabled + .radio-button {
-  background-color: $disabled-radio-color;
-  border-color: $disabled-radio-color;
+  background-color: $disabled-bg-color;
+  border-color: $disabled-bg-color;
 }
 .radio-input:disabled ~ .label {
   color: $disabled-text-color;
